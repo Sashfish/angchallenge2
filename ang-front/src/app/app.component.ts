@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Videogame } from "./videogame/videogame.ts";
+import { Videogame } from "./videogame/videogame";
 import { VideogameService } from "./videogame/videogame.service";
 @Component({
   selector: 'app-root',
@@ -7,9 +7,8 @@ import { VideogameService } from "./videogame/videogame.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang-front';
 
-  private videogames: any;
+  videogames: any;
 
   constructor(private videogameService: VideogameService){}
 

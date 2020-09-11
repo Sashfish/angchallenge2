@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Videogame } from "./videogame/videogame";
+//import { Videogame } from "./videogame/videogame";
 
 @Injectable()
 export class VideogameService {
