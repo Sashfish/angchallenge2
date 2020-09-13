@@ -1,6 +1,8 @@
 class Api::V1::VideogamesController < Api::V1::BaseController
   def index
-    respond_with Videogame.all
+    @videogame = Videogame.all
+    @videogame.to_json
+    render json: @videogame
   end
 
   def create
