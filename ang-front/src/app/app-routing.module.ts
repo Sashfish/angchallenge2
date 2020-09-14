@@ -6,10 +6,10 @@ import { VideogameDetailsComponent } from './videogame/videogame-details/videoga
 import { VideogameListComponent } from './videogame/videogame-list/videogame-list.component';
 
 const routes: Routes = [
-    {path: '', redirectTo: 'videogames', pathMatch: 'full'},
-    {path: 'videogames', component: VideogameListComponent},
-    {path: 'videogames/:id', component: VideogameDetailsComponent},
-    {path: 'create', component: VideogameCreateComponent}
+    { path: '', redirectTo: 'videogames', pathMatch: 'full' },
+    { path: 'videogames', component: VideogameListComponent },
+    { path: 'videogames/:id', component: VideogameDetailsComponent },
+    { path: 'create', component: VideogameCreateComponent }
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VideogameService } from 'src/app/videogame/videogame.service';
+import { Videogame } from 'src/app/videogame';
 
 @Component({
   selector: 'app-videogame-create',
@@ -7,9 +8,7 @@ import { VideogameService } from 'src/app/videogame/videogame.service';
   styleUrls: ['./videogame-create.component.css']
 })
 export class VideogameCreateComponent implements OnInit {
-
   videogame = {
-    id: null,
     title: '',
     features_maxplayers: null,
     features_multiplatform: null,
@@ -55,7 +54,6 @@ export class VideogameCreateComponent implements OnInit {
 
   createVideogame(): void {
     const data = {
-      id: this.videogame.id,
       title: this.videogame.title,
       features_maxplayers: this.videogame.features_maxplayers,
       features_multiplatform: this.videogame.features_multiplatform,
@@ -95,20 +93,18 @@ export class VideogameCreateComponent implements OnInit {
 
     this.videogameService.create(data)
     .subscribe(
-      response =>{
+      response => {
         console.log(response);
         this.submitted = true;
       },
-      error =>{
+      error => {
         console.log(error);
-      }
-    );
+      });
   }
 
-  newVideogame(): void{
+  newVideogame(): void {
     this.submitted = false;
     this.videogame = {
-      id: null,
       title: '',
       features_maxplayers: null,
       features_multiplatform: null,
@@ -144,7 +140,7 @@ export class VideogameCreateComponent implements OnInit {
       length_mainstory_median: null,
       length_mainstory_polled: null,
       length_mainstory_rushed: null
-    }
+    };
   }
 
 }
