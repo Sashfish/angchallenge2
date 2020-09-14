@@ -2,19 +2,25 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
-@Injectable()
+const baseURL = 'http://localhost:3000/api/v1/';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class VideogameService {
-  private videogameUrl = "http://localhost:3000/api/v1/videogames.json";
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  getVideogames(): Observable<any>{
-    return this.http.get(this.videogameUrl);//.pipe(map(data => {})).subscribe(result => {});
+  readAll(): Observable<any>{
+    return this.httpClient.get('${baseURL}videogames');
   }
-
-  //createVideogame(): Observable<any>{
-  //  let headers = new HttpHeaders({'Content-Type':'application/json'});
-  //  let options = new HttpRequest({headers: headers});
-  //  return this.http.post(this.videogameUrl, JSON.stringify(videogame), options);
-  //}
+  read(id): Observable<any>{
+    return this.httpClient.get('${baseURL}/${id}');
+  }
+  create(data): Observable<any>{
+    return this.httpClient.post(baseURL, data);
+  }
+  update(data, id): Observable<any>{
+    return this.httpClient.put('${baseURL}/${id}', data);
+  }
 }
