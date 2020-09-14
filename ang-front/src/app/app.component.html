@@ -1,91 +1,17 @@
-<h1>Add new game</h1>
-<!--<form (ngSubmit)="createVideogame(videogame)" #postForm='ngForm'>
-  <div class ='form-group'>
-    <label for='videogame-title'>
-      <h3>Title</h3>
-    </label>
-    <input type='text' class='form-control' id='title' name='title' #title='ngModel'[(ngModel)]='videogame.title'>
-  </div>
-</form>-->
-Videogames are here
-<section>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Max Players</th>
-      <th>Multiplatform?</th>
-      <th>Online?</th>
-      <th>Genres</th>
-      <th>Licensed?</th>
-      <th>Publishers</th>
-      <th>Sequel?</th>
-      <th>Review Score</th>
-      <th>Sales</th>
-      <th>Used Price</th>
-      <th>Console</th>
-      <th>Rating</th>
-      <th>Re-release?</th>
-      <th>Year</th>
-      <th>length_allplaystyles_average</th>
-      <th>length_allplaystyles_leisure</th>
-      <th>length_allplaystyles_median</th>
-      <th>length_allplaystyles_polled</th>
-      <th>length_allplaystyles_rushed</th>
-      <th>length_completionists_average</th>
-      <th>length_completionists_leisure</th>
-      <th>length_completionists_median</th>
-      <th>length_compltetionists_polled</th>
-      <th>length_completionists_rushed</th>
-      <th>length_mainplusextras_average</th>
-      <th>length_mainplusextras_leisure</th>
-      <th>length_mainplusextras_median</th>
-      <th>length_mainplusextras_polled</th>
-      <th>length_mainplusextras_rushed</th>
-      <th>length_mainstory_average</th>
-      <th>length_mainstory_leisure</th>
-      <th>length_mainstory_median</th>
-      <th>length_mainstory_polled</th>
-      <th>length_mainstory_rushed</th>
-    </tr>
+<div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Videogames</a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="videogames" class="nav-link">Videogames</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="create" class="nav-link">Create</a>
+      </li>
+    </div>
+  </nav>
 
-    <tbody>
-      <tr *ngFor="let videogame of videogames">
-        <td>{{videogame.title}}</td>
-        <td>{{videogame.features_maxplayers}}</td>
-        <td>{{videogame.features_multiplatform}}</td>
-        <td>{{videogame.features_online}}</td>
-        <td>{{videogame.metadata_genres}}</td>
-        <td>{{videogame.metadata_licensed}}</td>
-        <td>{{videogame.metadata_publishers}}</td>
-        <td>{{videogame.metadata_sequel}}</td>
-        <td>{{videogame.metrics_reviewscore}}</td>
-        <td>{{videogame.metrics_sales}}</td>
-        <td>{{videogame.metrics_usedprice}}</td>
-        <td>{{videogame.release_console}}</td>
-        <td>{{videogame.release_rating}}</td>
-        <td>{{videogame.release_rerelease}}</td>
-        <td>{{videogame.release_year}}</td>
-        <td>{{videogame.length_allplaystyles_average}}</td>
-        <td>{{videogame.length_allplaystyles_leisure}}</td>
-        <td>{{videogame.length_allplaystyles_median}}</td>
-        <td>{{videogame.length_allplaystyles_polled}}</td>
-        <td>{{videogame.length_allplaystyles_rushed}}</td>
-        <td>{{videogame.length_completionists_average}}</td>
-        <td>{{videogame.length_completionists_leisure}}</td>
-        <td>{{videogame.length_completionists_median}}</td>
-        <td>{{videogame.length_compltetionists_polled}}</td>
-        <td>{{videogame.length_completionists_rushed}}</td>
-        <td>{{videogame.length_mainplusextras_average}}</td>
-        <td>{{videogame.length_mainplusextras_leisure}}</td>
-        <td>{{videogame.length_mainplusextras_median}}</td>
-        <td>{{videogame.length_mainplusextras_polled}}</td>
-        <td>{{videogame.length_mainplusextras_rushed}}</td>
-        <td>{{videogame.length_mainstory_average}}</td>
-        <td>{{videogame.length_mainstory_leisure}}</td>
-        <td>{{videogame.length_mainstory_median}}</td>
-        <td>{{videogame.length_mainstory_polled}}</td>
-        <td>{{videogame.length_mainstory_rushed}}</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+  <div class="container mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>
