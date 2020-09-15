@@ -10,6 +10,7 @@ import { Videogame } from 'src/app/videogame';
 export class VideogameCreateComponent implements OnInit {
   videogame = {
     title: '',
+    features_handheld: null,
     features_maxplayers: null,
     features_multiplatform: null,
     features_online: null,
@@ -55,6 +56,7 @@ export class VideogameCreateComponent implements OnInit {
   createVideogame(): void {
     const data = {
       title: this.videogame.title,
+      features_handheld: this.videogame.features_handheld,
       features_maxplayers: this.videogame.features_maxplayers,
       features_multiplatform: this.videogame.features_multiplatform,
       features_online: this.videogame.features_online,
@@ -106,6 +108,7 @@ export class VideogameCreateComponent implements OnInit {
     this.submitted = false;
     this.videogame = {
       title: '',
+      features_handheld: null,
       features_maxplayers: null,
       features_multiplatform: null,
       features_online: null,

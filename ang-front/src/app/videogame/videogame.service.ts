@@ -15,12 +15,15 @@ export class VideogameService {
     return this.httpClient.get(baseURL);
   }
   read(id): Observable<any>{
-    return this.httpClient.get('${baseURL}/${id}');
+    return this.httpClient.get(baseURL + '/' + id);
   }
   create(data): Observable<any>{
     return this.httpClient.post(baseURL, data);
   }
   update(id, data): Observable<any>{
-    return this.httpClient.put('${baseURL}/${id}', data);
+    return this.httpClient.put(baseURL + '/' + id, data);
+  }
+  delete(id): Observable<any>{
+    return this.httpClient.delete(baseURL + '/' + id);
   }
 }

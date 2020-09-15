@@ -1,1 +1,135 @@
-<p>videogame-list works!</p>
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Videogame List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let videogame of videogames; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setCurrentVideogame(videogame, i)"
+      > {{videogame.title}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentVideogame" class="videogame">
+      <h4>Videogame</h4>
+      <div>
+        <label><strong>Title:</strong> {{currentVideogame.title}}</label>
+      </div>
+      <div>
+        <label><strong>Handheld:</strong> {{currentVideogame.features_handheld}}</label>
+      </div>
+      <div>
+        <label><strong>Max Players:</strong> {{currentVideogame.features_maxplayers}}</label>
+      </div>
+      <div>
+        <label><strong>Multiplatform:</strong> {{currentVideogame.features_multiplatform}}</label>
+      </div>
+      <div>
+        <label><strong>Online:</strong> {{currentVideogame.features_online}}</label>
+      </div>
+      <div>
+        <label><strong>Genres:</strong> {{currentVideogame.metadata_genres}}</label>
+      </div>
+      <div>
+        <label><strong>Licensed:</strong> {{currentVideogame.metadata_licensed}}</label>
+      </div>
+      <div>
+        <label><strong>Publishers:</strong> {{currentVideogame.metadata_publishers}}</label>
+      </div>
+      <div>
+        <label><strong>Sequel:</strong> {{currentVideogame.metadata_sequel}}</label>
+      </div>
+      <div>
+        <label><strong>Review Score:</strong> {{currentVideogame.metrics_reviewscore}}</label>
+      </div>
+      <div>
+        <label><strong>Sales:</strong> {{currentVideogame.metrics_sales}}</label>
+      </div>
+      <div>
+        <label><strong>Used Price:</strong> {{currentVideogame.metrics_usedprice}}</label>
+      </div>
+      <div>
+        <label><strong>Console:</strong> {{currentVideogame.release_console}}</label>
+      </div>
+      <div>
+        <label><strong>Rating:</strong> {{currentVideogame.release_rating}}</label>
+      </div>
+      <div>
+        <label><strong>Re-release:</strong> {{currentVideogame.release_rerelease}}</label>
+      </div>
+      <div>
+        <label><strong>Year:</strong> {{currentVideogame.release_year}}</label>
+      </div>
+      <div>
+        <label><strong>Length - All Playstyles(Average):</strong> {{currentVideogame.length_allplaystyles_average}}</label>
+      </div>
+      <div>
+        <label><strong>Length - All Playstyles(Leisure):</strong> {{currentVideogame.length_allplaystyles_leisure}}</label>
+      </div>
+      <div>
+        <label><strong>Length - All Playstyles(Median):</strong> {{currentVideogame.length_allplaystyles_median}}</label>
+      </div>
+      <div>
+        <label><strong>Length - All Playstyles(Polled):</strong> {{currentVideogame.length_allplaystyles_polled}}</label>
+      </div>
+      <div>
+        <label><strong>Length - All Playstyles(Rushed):</strong> {{currentVideogame.length_allplaystyles_rushed}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Completionists(Average):</strong> {{currentVideogame.length_completionists_average}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Completionists(Leisure):</strong> {{currentVideogame.length_completionists_leisure}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Completionists(Median):</strong> {{currentVideogame.length_completionists_median}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Completionists(Polled):</strong> {{currentVideogame.length_compltetionists_polled}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Completionists(Rushed):</strong> {{currentVideogame.length_completionists_rushed}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Plus Extras(Average):</strong> {{currentVideogame.length_mainplusextras_average}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Plus Extras(Leisure):</strong> {{currentVideogame.length_mainplusextras_leisure}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Plus Extras(Median):</strong> {{currentVideogame.length_mainplusextras_median}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Plus Extras(Polled):</strong> {{currentVideogame.length_mainplusextras_polled}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Plus Extras(Rushed):</strong> {{currentVideogame.length_mainplusextras_rushed}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Story(Average):</strong> {{currentVideogame.length_mainstory_average}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Story(Leisure):</strong> {{currentVideogame.length_mainstory_leisure}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Story(Median):</strong> {{currentVideogame.length_mainstory_median}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Story(Polled):</strong> {{currentVideogame.length_mainstory_polled}}</label>
+      </div>
+      <div>
+        <label><strong>Length - Main Story(Rushed):</strong> {{currentVideogame.length_mainstory_rushed}}</label>
+      </div>
+      <a class="badge badge-warning" routerLink="/videogames/">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentVideogame">
+      <br />
+      <p>Please click on a videogame</p>
+    </div>
+  </div>
+</div>

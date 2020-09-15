@@ -1,0 +1,13 @@
+li:hover {
+  background-color: blue;
+}
+ul {
+  width: 550px;
+  height: 700px;
+  overflow: scroll;
+}
+div.videogame {
+  width: 550px;
+  height: 700px;
+  overflow: scroll;
+}

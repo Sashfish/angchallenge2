@@ -1,1 +1,386 @@
-<p>videogame-details works!</p>
+<div style="width: 500px; margin: auto;">
+  <div *ngIf="currentVideogame" class="edit-form">
+    <h4>Videogame</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentVideogame.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Handheld?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="features_handheld"
+          [(ngModel)]="currentVideogame.features_handheld"
+          name="features_handheld"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Max Players</label>
+        <input
+          type="text"
+          class="form-control"
+          id="features_maxplayers"
+          [(ngModel)]="currentVideogame.features_maxplayers"
+          name="features_maxplayers"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Multiplatform?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="features_multiplatform"
+          [(ngModel)]="currentVideogame.features_multiplatform"
+          name="features_multiplatform"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Online?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="features_online"
+          [(ngModel)]="currentVideogame.features_online"
+          name="features_online"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Genres</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metadata_genres"
+          [(ngModel)]="currentVideogame.metadata_genres"
+          name="metadata_genres"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Licensed?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metadata_licensed"
+          [(ngModel)]="currentVideogame.metadata_licensed"
+          name="metadata_licensed"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Publishers</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metadata_publishers"
+          [(ngModel)]="currentVideogame.metadata_publishers"
+          name="metadata_publishers"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Sequel?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metadata_sequel"
+          [(ngModel)]="currentVideogame.metadata_sequel"
+          name="metadata_sequel"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Review Score</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metrics_reviewscore"
+          [(ngModel)]="currentVideogame.metrics_reviewscore"
+          name="metrics_reviewscore"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Sales</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metrics_sales"
+          [(ngModel)]="currentVideogame.metrics_sales"
+          name="metrics_sales"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Used Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="metrics_usedprice"
+          [(ngModel)]="currentVideogame.metrics_usedprice"
+          name="metrics_usedprice"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Console</label>
+        <input
+          type="text"
+          class="form-control"
+          id="release_console"
+          [(ngModel)]="currentVideogame.release_console"
+          name="release_console"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Rating</label>
+        <input
+          type="text"
+          class="form-control"
+          id="release_rating"
+          [(ngModel)]="currentVideogame.release_rating"
+          name="release_rating"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Re-release?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="release_rerelease"
+          [(ngModel)]="currentVideogame.release_rerelease"
+          name="release_rerelease"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Year</label>
+        <input
+          type="text"
+          class="form-control"
+          id="release_year"
+          [(ngModel)]="currentVideogame.release_year"
+          name="release_year"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - All Playstyles(Average)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_allplaystyles_average"
+          [(ngModel)]="currentVideogame.length_allplaystyles_average"
+          name="length_allplaystyles_average"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - All Playstyles(Leisure)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_allplaystyles_leisure"
+          [(ngModel)]="currentVideogame.length_allplaystyles_leisure"
+          name="length_allplaystyles_leisure"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - All Playstyles(Median)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_allplaystyles_median"
+          [(ngModel)]="currentVideogame.length_allplaystyles_median"
+          name="length_allplaystyles_median"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - All Playstyles(Polled)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_allplaystyles_polled"
+          [(ngModel)]="currentVideogame.length_allplaystyles_polled"
+          name="length_allplaystyles_polled"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - All Playstyles(Rushed)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_allplaystyles_rushed"
+          [(ngModel)]="currentVideogame.length_allplaystyles_rushed"
+          name="length_allplaystyles_rushed"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Completionists(Average)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_completionists_average"
+          [(ngModel)]="currentVideogame.length_completionists_average"
+          name="length_completionists_average"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Completionists(Leisure)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_completionists_leisure"
+          [(ngModel)]="currentVideogame.length_completionists_leisure"
+          name="length_completionists_leisure"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Completionists(Median)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_completionists_median"
+          [(ngModel)]="currentVideogame.length_completionists_median"
+          name="length_completionists_median"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Completionists(Polled)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_compltetionists_polled"
+          [(ngModel)]="currentVideogame.length_compltetionists_polled"
+          name="length_compltetionists_polled"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Completionists(Rushed)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_completionists_rushed"
+          [(ngModel)]="currentVideogame.length_completionists_rushed"
+          name="length_completionists_rushed"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Plus Extras(Average)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainplusextras_average"
+          [(ngModel)]="currentVideogame.length_mainplusextras_average"
+          name="length_mainplusextras_average"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Plus Extras(Leisure)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainplusextras_leisure"
+          [(ngModel)]="currentVideogame.length_mainplusextras_leisure"
+          name="length_mainplusextras_leisure"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Plus Extras(Median)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainplusextras_median"
+          [(ngModel)]="currentVideogame.length_mainplusextras_median"
+          name="length_mainplusextras_median"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Plus Extras(Polled)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainplusextras_polled"
+          [(ngModel)]="currentVideogame.length_mainplusextras_polled"
+          name="length_mainplusextras_polled"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Plus Extras(Rushed)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainplusextras_rushed"
+          [(ngModel)]="currentVideogame.length_mainplusextras_rushed"
+          name="length_mainplusextras_rushed"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Story(Average)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainstory_average"
+          [(ngModel)]="currentVideogame.length_mainstory_average"
+          name="length_mainstory_average"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Story(Leisure)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainstory_leisure"
+          [(ngModel)]="currentVideogame.length_mainstory_leisure"
+          name="length_mainstory_leisure"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Story(Median)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainstory_median"
+          [(ngModel)]="currentVideogame.length_mainstory_median"
+          name="length_mainstory_median"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Story(Polled)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainstory_polled"
+          [(ngModel)]="currentVideogame.length_mainstory_polled"
+          name="length_mainstory_polled"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Length - Main Story(Rushed)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="length_mainstory_rushed"
+          [(ngModel)]="currentVideogame.length_mainstory_rushed"
+          name="length_mainstory_rushed"
+        />
+      </div>
+
+    </form>
+
+    <button class="badge badge-danger mr-2" (click)="deleteVideogame()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success"
+      (click)="updateVideogame()"
+    >
+      Update
+    </button>
+    <p></p>
+  </div>
+
+  <div *ngIf="!currentVideogame">
+    <br />
+    <p>This videogame is not accessible</p>
+  </div>
+</div>

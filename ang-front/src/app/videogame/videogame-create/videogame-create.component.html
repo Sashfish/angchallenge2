@@ -1,4 +1,3 @@
-lololol
 <div style="width: 500px; margin: auto;">
   <div class="submit-form">
     <div *ngIf="!submitted">
@@ -11,6 +10,17 @@ lololol
           required
           [(ngModel)]="videogame.title"
           name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Handheld?</label>
+        <input
+          type="text"
+          class="form-control"
+          id="features_handheld"
+          required
+          [(ngModel)]="videogame.features_handheld"
+          name="features_handheld"
         />
       </div>
 

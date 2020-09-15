@@ -2,6 +2,7 @@ export class Videogame {
   constructor(
     public id?: number,
     public title?: string,
+    public features_handheld?: boolean,
     public features_maxplayers?: number,
     public features_multiplatform?: boolean,
     public features_online?: boolean,
