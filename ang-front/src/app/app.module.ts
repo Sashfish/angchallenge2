@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { VideogameService } from './videogame/videogame.service';
 //import { Videogame } from './videogame';
+import { ChartsModule } from 'ng2-charts';
 
 import { VideogameCreateComponent } from './videogame/videogame-create/videogame-create.component';
 import { VideogameDetailsComponent } from './videogame/videogame-details/videogame-details.component';
@@ -24,7 +25,8 @@ import { VideogameGraphsComponent } from './videogame/videogame-graphs/videogame
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [VideogameService],
   bootstrap: [AppComponent]
