@@ -10,13 +10,15 @@ import { VideogameService } from './videogame/videogame.service';
 import { VideogameCreateComponent } from './videogame/videogame-create/videogame-create.component';
 import { VideogameDetailsComponent } from './videogame/videogame-details/videogame-details.component';
 import { VideogameListComponent } from './videogame/videogame-list/videogame-list.component';
+import { VideogameGraphsComponent } from './videogame/videogame-graphs/videogame-graphs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideogameCreateComponent,
     VideogameDetailsComponent,
-    VideogameListComponent
+    VideogameListComponent,
+    VideogameGraphsComponent
   ],
   imports: [
     BrowserModule,
