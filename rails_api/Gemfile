@@ -17,7 +17,7 @@ gem 'puma', '~> 4.1'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'responders'
 gem 'sprockets'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
